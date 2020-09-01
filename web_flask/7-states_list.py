@@ -13,6 +13,7 @@ def close_db(error):
         the end of the request. """
     storage.close()
 
+
 @app.route('/states_list', strict_slashes=False)
 def states():
     """ Render state template """

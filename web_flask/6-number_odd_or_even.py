@@ -41,10 +41,10 @@ def number_template(n):
 @app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
 def odd_or_even(n):
     if n % 2 == 0:
-        typo = 'is even'
+        typo = '{} is even'.format(n)
     else:
-        typo = 'is odd'
-    return render_template('6-number_odd_or_even.html', n=n, odd_even=typo)
+        typo = '{} is odd'.format(n)
+    return render_template('6-number_odd_or_even.html', n=typo)
 
 
 if __name__ == "__main__":

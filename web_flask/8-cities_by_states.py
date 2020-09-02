@@ -16,7 +16,7 @@ def close_db(error):
 
 
 @app.route('/cities_by_states', strict_slashes=False)
-def cities():
+def list_cities():
     """ Render state template """
     list_states = storage.all(State).values()
     return render_template('8-cities_by_states.html', all_states=list_states)
